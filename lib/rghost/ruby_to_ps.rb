@@ -3,12 +3,7 @@ module RGhost::RubyToPs
 
   
   def to_string(value)
-    #ps escape
-    value=pack_string(value)
-    ps_str=ps_escape(value)
-    
-    "(#{ps_str}) "
-
+    "(#{pack_string(ps_escape(value))}) "
   end
   
   def pack_string(s)
